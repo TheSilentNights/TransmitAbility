@@ -1,11 +1,6 @@
 package com.thesilentnights.transmitability.repo;
 
-import com.thesilentnights.transmitability.util.ColorFormat;
-import io.papermc.paper.enchantments.EnchantmentRarity;
-import io.papermc.paper.inventory.ItemRarity;
-import net.kyori.adventure.text.Component;
-import org.bukkit.ChatColor;
-import org.bukkit.Color;
+import com.thesilentnights.transmitability.util.ColorFormatter;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemFlag;
@@ -20,6 +15,6 @@ public class DefaultItem {
         defaultItem.addItemFlags(ItemFlag.HIDE_UNBREAKABLE);
         defaultItem.addUnsafeEnchantment(Enchantment.MENDING,100);
         ItemMeta itemMeta = defaultItem.getItemMeta();
-        itemMeta.setDisplayName(ColorFormat.format("TpShovel"));
+        itemMeta.setDisplayName(ColorFormatter.format("TpShovel"));
     }
 }
