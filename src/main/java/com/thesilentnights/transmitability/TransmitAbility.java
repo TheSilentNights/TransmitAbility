@@ -1,8 +1,12 @@
 package com.thesilentnights.transmitability;
 
+import com.thesilentnights.transmitability.commands.GetItem;
+import com.thesilentnights.transmitability.event.RightClickEvent;
 import com.thesilentnights.transmitability.repo.DefaultItem;
 import org.bukkit.configuration.Configuration;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.Objects;
 
 public final class TransmitAbility extends JavaPlugin {
     private static TransmitAbility instance;
@@ -22,6 +26,11 @@ public final class TransmitAbility extends JavaPlugin {
         //初始化物品
         DefaultItem.init();
 
+        //注册事件
+        getServer().getPluginManager().registerEvents(new RightClickEvent(),this);
+
+        //注册命令
+        Objects.requireNonNull(getCommand("getTpDefaultItem")).setExecutor(new GetItem());
 
     }
     @Override

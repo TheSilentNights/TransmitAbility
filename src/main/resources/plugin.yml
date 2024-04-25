@@ -3,3 +3,7 @@ version: '${project.version}'
 main: com.thesilentnights.transmitability.TransmitAbility
 api-version: '1.19'
 authors: [TheSilentNights]
+commands:
+  getTpDefaultItem:
+    description: none
+    usage: none
